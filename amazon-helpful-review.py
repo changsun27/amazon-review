@@ -111,7 +111,6 @@ df2 = getRatio(df2)
 
 #### explore data
 ####remove na values in ratio
-#df_nona = df[np.isfinite(df['ratio'])]  #725961 electronic
 df1_nona = df1[np.isfinite(df1['ratio'])]  #1088752
 df2_nona = df2[np.isfinite(df2['ratio'])]  #801567
 
