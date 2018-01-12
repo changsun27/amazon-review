@@ -321,12 +321,6 @@ plt.show()
 
 
 ############## Neural Network Model ##############
-#Doc2Vec not only does that, but also aggregates all the words in a 
-#sentence into a vector. To do that, it simply treats a sentence label 
-#as a special word, and does some voodoo on that special word. 
-#Hence, that special word is a label for a sentence.
-
-
 dftrain = pd.read_csv('train.csv')
 dftest = pd.read_csv('test.csv')
 
@@ -461,9 +455,9 @@ nn_test.shape
 ### RNN
 # a basic 3-layer architecture.
 nnmodel2 = Sequential()
-nnmodel2.add(Dense(64, activation='relu', input_dim=301))
+nnmodel2.add(Dense(128, activation='relu', input_dim=301))
 nnmodel2.add(Dropout(0.2))
-nnmodel2.add(Dense(32, activation='relu'))
+nnmodel2.add(Dense(64, activation='relu'))
 nnmodel2.add(Dropout(0.2))
 nnmodel2.add(Dense(1, activation='sigmoid')) # output
 nnmodel2.compile(optimizer='adam',
